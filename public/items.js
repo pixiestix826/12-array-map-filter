@@ -38,7 +38,7 @@ var items = [{
   fileData: '',
   language: 'en-US',
   hasVariations: false,
-  usedManufacturer: false,,
+  usedManufacturer: false,
 }, {
   listingId: 129335930,
   state: 'active',
