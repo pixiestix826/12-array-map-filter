@@ -1,10 +1,9 @@
 //calculate the average price of all items
 //console.log the average price
-function AvgPrice() {
-  return items.map(function(item) {
-    return item.price;
-  });
-}
+var sumPrice = items.reduce((currentPrice, item) => {
+  return currentPrice + item.price;
+}, 0);
 
-var price = [];
-console.log(price);
+var avgPrice = sumPrice / items.length;
+
+console.log(avgPrice);
