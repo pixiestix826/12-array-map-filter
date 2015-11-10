@@ -34,9 +34,7 @@ console.log(euroItem);
 //find the items made of wood
 //console.log those items
 var woodenItems = items.filter((item) => {
-  if (item.materials) {
-    return item.materials === 'wood';
-  }
+  return item.materials === 'wood';
 }).map(function(item) {
   return item.title;
 });
