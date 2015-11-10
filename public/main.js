@@ -1,6 +1,6 @@
 
 /* globals items */
-
+(function() {
 //calculate the average price of all items
 //console.log the average price
 var sumPrice = items.reduce((currentPrice, item) => {
@@ -40,3 +40,17 @@ var woodenItems = items.filter((item) => {
 });
 
 console.log(woodenItems);
+
+//find the items made with 8+ materials
+//console.log those items
+var multiMedia = items.filter((item) => {
+  if (item.materials) {
+    return item.materials.length >= 8;
+  }
+}).map(function(item) {
+  return item.title + item.materials;
+});
+
+console.log(multiMedia);
+
+})();
