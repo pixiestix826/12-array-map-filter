@@ -1023,4 +1023,5 @@ var items = [{
   language: 'en-US',
   hasVariations: false,
   usedManufacturer: false,
-}];
+},
+];
