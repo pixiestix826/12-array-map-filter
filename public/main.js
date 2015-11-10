@@ -53,4 +53,18 @@ var multiMedia = items.filter((item) => {
 
 console.log(multiMedia);
 
+//calculate how many item were made
+//by their sellers
+var craftySellers = items.filter((item) => {
+  if (item.whoMade) {
+    return item.whoMade.indexOf('i_did') !== -1;
+  }
+});
+
+var numCrafters = items.reduce(() => {
+  return craftySellers.length;
+});
+
+console.log(numCrafters + ' were made by thier sellers');
+
 })();
