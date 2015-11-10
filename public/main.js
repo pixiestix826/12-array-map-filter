@@ -1,3 +1,6 @@
+
+/* globals items */
+
 //calculate the average price of all items
 //console.log the average price
 var sumPrice = items.reduce((currentPrice, item) => {
@@ -10,9 +13,22 @@ console.log(avgPrice);
 
 //create an array of items that cost
 //between $14.00 and $18.00 USD
-var cheap = items.map((item) => {
-  if (items.price) {
-    item.price > 14.00 && item.price < 18.00;
-  }
+var priceRange = items.filter((item) => {
+  return item.price > 14 && item.price < 18;
+}).map(function(item) {
+  return item.title;
 });
-console.log('Items that cost between $14.00 USD and $18.00 USD:', cheap);
+
+console.log('Items that cost between $14.00 USD and $18.00 USD:', priceRange);
+
+//find the item with a "GBP" currency code and
+//print its name and price. console.log the one found.
+var euroItem = items.filter((item) => {
+  return item.currencyCode === 'GBP';
+}).map(function(item) {
+  return item.title + ' costs ' + item.price;
+});
+
+console.log(euroItem);
+
+//
